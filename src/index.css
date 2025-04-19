@@ -1,11 +1,11 @@
 body {
-  background: radial-gradient(
-    circle at 7.5% 24%,
+  background: linear-gradient(
     rgb(237, 161, 193) 0%,
     rgb(250, 178, 172) 25.5%,
     rgb(190, 228, 210) 62.3%,
     rgb(215, 248, 247) 93.8%
   );
+  font-family: "Montserrat", sans-serif;
 }
 
 .app {
@@ -18,6 +18,20 @@ body {
   border-radius: 16px;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
+.search-form-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  padding: 16px 20px;
+  font-size: 16px;
+}
+
+.search-form-button {
+  background-color: rgb(255, 114, 173);
+  color: white;
+  padding: 16px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
 }
