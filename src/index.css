@@ -21,7 +21,7 @@ body {
 
 .city {
   margin: 0;
-  font-size: 38px;
+  font-size: 32px;
 }
 
 a {
@@ -79,13 +79,14 @@ p {
 
 .temperature-data {
   margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .icon {
   font-size: 48px;
   position: relative;
-  top: -8px;
-  margin-right: 8px;
+  top: -40px;
 }
 
 .temp {
@@ -94,10 +95,11 @@ p {
 }
 
 .unit {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   position: relative;
-  top: -40px;
+  margin-left: 2px;
+  top: -18px;
 }
 
 footer {

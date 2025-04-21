@@ -19,6 +19,10 @@ function updateData(response) {
 
   let timeElement = document.querySelector("#day-time");
   timeElement.innerHTML = formatDate(date);
+
+  let icon = `<img src="${response.data.condition.icon_url}" class="icon"/>`;
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.innerHTML = icon;
 }
 
 function formatDate(date) {
