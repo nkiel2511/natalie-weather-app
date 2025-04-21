@@ -10,12 +10,26 @@ body {
 
 .app {
   background: white;
-  opacity: 0.8;
+  opacity: 0.9;
   max-width: 600px;
   margin: 45px auto;
   padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 16px;
+}
+
+.city {
+  margin: 0;
+  font-size: 38px;
+}
+
+a {
+  color: rgb(251, 83, 153);
+}
+
+header {
+  border-bottom: 1px solid #f9f7fe;
+  padding: 0 0 30px 0;
 }
 
 .search-form-input {
@@ -30,8 +44,66 @@ body {
 .search-form-button {
   background-color: rgb(255, 114, 173);
   color: white;
+  margin-left: 8px;
   padding: 16px 20px;
   font-size: 16px;
   border: none;
   border-radius: 8px;
+}
+
+main {
+  line-height: 175%;
+  padding: 30px 0 30px 0;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.humidity {
+  font-weight: 600;
+  color: rgb(251, 83, 153);
+}
+
+.wind {
+  font-weight: 600;
+  color: rgb(251, 83, 153);
+}
+
+.temperature-data {
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 48px;
+  position: relative;
+  top: -8px;
+  margin-right: 8px;
+}
+
+.temp {
+  font-weight: 600;
+  font-size: 72px;
+}
+
+.unit {
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  top: -40px;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
 }
