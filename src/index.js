@@ -117,4 +117,3 @@ function displayForecast(response) {
 }
 
 searchCity("Glasgow");
-displayForecast();
