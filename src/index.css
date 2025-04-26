@@ -1,13 +1,47 @@
 body {
-  background: radial-gradient(
-    circle at 7.5% 24%,
-    rgb(237, 161, 193) 0%,
-    rgb(250, 178, 172) 25.5%,
-    rgb(190, 228, 210) 62.3%,
-    rgb(215, 248, 247) 93.8%
+  background: linear-gradient(
+    106.5deg,
+    rgba(255, 215, 185, 0.91) 23%,
+    rgba(223, 159, 247, 0.8) 93%
   );
   background-attachment: fixed;
   font-family: "Montserrat", sans-serif;
+}
+
+.theme-button {
+  background: white;
+  color: #9519c3;
+  display: block;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border: 2px #9940b9 solid;
+  padding: 8px 12px;
+  border-radius: 30px;
+}
+
+.dark .theme-button {
+  background: rgba(31, 31, 32, 0.7);
+  color: white;
+  border: 2px white solid;
+}
+
+.theme-button:hover {
+  background: #f9f7fe;
+}
+
+.dark .theme-button:hover {
+  background: rgba(65, 65, 67, 0.7);
+}
+
+.dark {
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  background-attachment: fixed;
 }
 
 .app {
@@ -19,13 +53,22 @@ body {
   border-radius: 16px;
 }
 
+.dark .app {
+  background: rgba(31, 31, 32, 0.7);
+  color: white;
+}
+
 .city {
   margin: 0;
   font-size: 32px;
 }
 
 a {
-  color: rgb(251, 83, 153);
+  color: #9940b9;
+}
+
+.dark a {
+  color: #e49bff;
 }
 
 header {
@@ -42,14 +85,37 @@ header {
   font-size: 16px;
 }
 
+.dark .search-form-input {
+  background-color: rgba(79, 79, 80, 0.546);
+}
+
+input::placeholder {
+  color: rgba(207, 196, 196, 0.805);
+}
+
 .search-form-button {
-  background-color: rgb(255, 114, 173);
+  background-color: #9940b9;
   color: white;
   margin-left: 8px;
   padding: 16px 28px;
   font-size: 16px;
   border: none;
   border-radius: 8px;
+}
+
+.dark .search-form-button {
+  background-color: #ad54cd;
+  color: white;
+}
+
+.search-form-button:hover {
+  background-color: #9e63b4;
+  color: white;
+}
+
+.dark .search-form-button:hover {
+  background-color: #b668d2;
+  color: white;
 }
 
 main {
@@ -67,14 +133,26 @@ p {
   color: rgba(0, 0, 0, 0.7);
 }
 
+.dark p {
+  color: white;
+}
+
 .humidity {
   font-weight: 600;
-  color: rgb(251, 83, 153);
+  color: #9940b9;
+}
+
+.dark .humidity {
+  color: #e49bff;
 }
 
 .wind {
   font-weight: 600;
-  color: rgb(251, 83, 153);
+  color: #9940b9;
+}
+
+.dark .wind {
+  color: #e49bff;
 }
 
 .temperature-data {
@@ -110,6 +188,10 @@ p {
   color: rgba(0, 0, 0, 0.7);
 }
 
+.dark .weather-forecast-date {
+  color: white;
+}
+
 .weather-forecast-icon {
   width: 80px;
   height: 80px;
@@ -122,9 +204,13 @@ p {
   font-weight: 600;
   line-height: 16px;
   font-size: 14px;
-  color: rgb(251, 83, 153);
+  color: #9940b9;
   display: flex;
   justify-content: center;
+}
+
+.dark .weather-forecast-temperatures {
+  color: #e49bff;
 }
 
 .weather-forecast-temperature {
@@ -145,4 +231,8 @@ footer {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
+}
+
+.dark footer {
+  color: white;
 }

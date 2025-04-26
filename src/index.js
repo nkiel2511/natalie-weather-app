@@ -1,3 +1,12 @@
+function changeTheme() {
+  let body = document.querySelector("body");
+
+  body.classList.toggle("dark");
+}
+
+let themeButton = document.querySelector("#theme-button");
+themeButton.addEventListener("click", changeTheme);
+
 function updateData(response) {
   let tempElement = document.querySelector("#temp");
   let temp = response.data.temperature.current;
@@ -45,7 +54,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day}, ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
