@@ -23,6 +23,8 @@ function updateData(response) {
   let icon = `<img src="${response.data.condition.icon_url}" class="icon"/>`;
   let iconElement = document.querySelector("#weather-icon");
   iconElement.innerHTML = icon;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -61,8 +63,14 @@ function search(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
 
-searchCity("Glasgow");
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "7ff3c5ef4330987abab23faeo62t9ee4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -86,4 +94,5 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHtml;
 }
 
+searchCity("Glasgow");
 displayForecast();
