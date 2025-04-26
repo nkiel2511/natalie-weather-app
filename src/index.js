@@ -4,9 +4,6 @@ function changeTheme() {
   body.classList.toggle("dark");
 }
 
-let themeButton = document.querySelector("#theme-button");
-themeButton.addEventListener("click", changeTheme);
-
 function updateData(response) {
   let tempElement = document.querySelector("#temp");
   let temp = response.data.temperature.current;
@@ -69,9 +66,6 @@ function search(event) {
   searchCity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", search);
-
 function formatForecastDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
@@ -115,5 +109,11 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
+
+let themeButton = document.querySelector("#theme-button");
+themeButton.addEventListener("click", changeTheme);
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", search);
 
 searchCity("Glasgow");
